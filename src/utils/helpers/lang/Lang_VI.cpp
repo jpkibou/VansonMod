@@ -195,7 +195,7 @@ std::map<std::string, std::string> Lang_VI::getStrings() {
     {"Set_Check_Update", "Kiểm tra cập nhật"},
     {"Set_Res_Limit", "Giới hạn kết quả"},
     {"Set_Group_Range", "Phạm vi nhóm ±"},
-    {"Set_Group_Range_Placeholder", "Phạm vi (vd: 50)"},
+    {"Set_Group_Range_Placeholder", "Phạm vi (0x100 = 256)"},
     {"Set_Group_Mode", "Chế độ nhóm"},
     {"Group_Anchor", "Neo"},
     {"Group_Order", "Thứ tự"},

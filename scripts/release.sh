@@ -32,7 +32,7 @@ def write_ar(output_path, members):
             name_bytes = archive_name.encode("ascii")
             if len(name_bytes) > 15:
                 raise ValueError(f"Archive member name too long: {archive_name}")
-            header = name_bytes + b"/" + (b" " * (15 - len(name_bytes)))
+            header = name_bytes + (b" " * (16 - len(name_bytes)))
             header += b"0".ljust(12)
             header += b"0".ljust(6)
             header += b"0".ljust(6)

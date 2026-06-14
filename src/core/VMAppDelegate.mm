@@ -27,7 +27,7 @@
   [[NSUserDefaults standardUserDefaults] registerDefaults:@{
     @"app_theme" : @1,
     @"resultLimit" : @100,
-    @"groupRange" : @50,
+    @"groupRange" : @"0x100",
     @"floatTolerance" : @0.001,
     @"lockInterval" : @0.5,
     @"preventSleep" : @NO
@@ -161,7 +161,7 @@
 
     [def setObject:@"0x100000000" forKey:@"startAddr"];
     
-    [def setObject:@"50" forKey:@"groupRange"];
+    [def setObject:@"0x100" forKey:@"groupRange"];
     [def setObject:@"100" forKey:@"resultLimit"];
     [def setObject:@"0.001" forKey:@"floatTolerance"];
 

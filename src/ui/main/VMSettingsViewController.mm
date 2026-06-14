@@ -206,7 +206,7 @@
   self.groupRangeField =
       [self createTextField:TR(@"Set_Group_Range_Placeholder")];
   if (![def objectForKey:@"groupRange"])
-    self.groupRangeField.text = @"50";
+    self.groupRangeField.text = @"0x100";
   self.resultLimitField = [self createTextField:@"100"];
   self.resultLimitField.keyboardType = UIKeyboardTypeNumberPad;
   self.toleranceField = [self createTextField:@"0.0001"];
@@ -251,7 +251,7 @@
   self.endField.text = [def objectForKey:@"endAddr"] ?: @"";
   self.endField.placeholder =
       TR(@"Settings_Auto_By_Mode"); 
-  self.groupRangeField.text = [def objectForKey:@"groupRange"] ?: @"50";
+  self.groupRangeField.text = [def objectForKey:@"groupRange"] ?: @"0x100";
   self.resultLimitField.text = [def objectForKey:@"resultLimit"] ?: @"100";
   self.toleranceField.text = [def objectForKey:@"floatTolerance"] ?: @"0.0001";
 
@@ -976,7 +976,7 @@
   [def setObject:@"0x100000000" forKey:@"startAddr"];
   
   [def setObject:@"0x300000000" forKey:@"endAddr"];
-  [def setObject:@"50" forKey:@"groupRange"];
+  [def setObject:@"0x100" forKey:@"groupRange"];
   [def setObject:@"100" forKey:@"resultLimit"];
   [def setObject:@"0.001" forKey:@"floatTolerance"];
   [def setFloat:0.5f forKey:@"lockInterval"];
@@ -1011,7 +1011,7 @@
     }
   }
 
-  [VMMemoryEngine shared].groupSearchRange = 50;
+  [VMMemoryEngine shared].groupSearchRange = 0x100;
   [VMMemoryEngine shared].resultLimit = 100;
   [VMMemoryEngine shared].floatTolerance = 0.001;
   [VMMemoryEngine shared].groupAnchorMode = NO;  
@@ -1019,7 +1019,7 @@
   self.startField.text = @"0x100000000";
   
   self.endField.text = @"0x300000000";
-  self.groupRangeField.text = @"50";
+  self.groupRangeField.text = @"0x100";
   self.resultLimitField.text = @"100";
   self.toleranceField.text = @"0.001";
   self.intervalSegment.selectedSegmentIndex = 1; 

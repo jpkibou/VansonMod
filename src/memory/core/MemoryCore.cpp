@@ -217,7 +217,7 @@ static bool matchGroupItemValue(const void *ptr, const GroupItem &item,
               (((uint64_t)target) & 0xFFFFFFFFFFFFULL));
 }
 
-MemoryCore::MemoryCore() : _pid(0), _task(MACH_PORT_NULL), _resultLimit(0), _floatTolerance(0.001), _groupSearchRange(200), _groupAnchorMode(false) {}
+MemoryCore::MemoryCore() : _pid(0), _task(MACH_PORT_NULL), _resultLimit(0), _floatTolerance(0.001), _groupSearchRange(0x100), _groupAnchorMode(false) {}
 
 MemoryCore::~MemoryCore() {
   clearFastFuzzySnapshot();

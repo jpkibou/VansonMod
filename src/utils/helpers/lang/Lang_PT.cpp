@@ -195,7 +195,7 @@ std::map<std::string, std::string> Lang_PT::getStrings() {
     {"Set_Check_Update", "Verificar Atualização"},
     {"Set_Res_Limit", "Limite de Resultados"},
     {"Set_Group_Range", "Intervalo do Grupo ±"},
-    {"Set_Group_Range_Placeholder", "Intervalo (ex: 50)"},
+    {"Set_Group_Range_Placeholder", "Intervalo (0x100 = 256)"},
     {"Set_Group_Mode", "Modo de Grupo"},
     {"Group_Anchor", "Âncora"},
     {"Group_Order", "Ordem"},

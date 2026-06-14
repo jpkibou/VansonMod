@@ -195,7 +195,7 @@ std::map<std::string, std::string> Lang_JA::getStrings() {
     {"Set_Check_Update", "更新確認"},
     {"Set_Res_Limit", "結果制限"},
     {"Set_Group_Range", "グループ範囲 ±"},
-    {"Set_Group_Range_Placeholder", "範囲 (例: 50)"},
+    {"Set_Group_Range_Placeholder", "範囲 (0x100 = 256)"},
     {"Set_Group_Mode", "グループモード"},
     {"Group_Anchor", "アンカー"},
     {"Group_Order", "順序"},

@@ -195,7 +195,7 @@ std::map<std::string, std::string> Lang_TH::getStrings() {
     {"Set_Check_Update", "ตรวจสอบอัปเดต"},
     {"Set_Res_Limit", "จำกัดผลลัพธ์"},
     {"Set_Group_Range", "ช่วงกลุ่ม ±"},
-    {"Set_Group_Range_Placeholder", "ช่วง (เช่น 50)"},
+    {"Set_Group_Range_Placeholder", "ช่วง (0x100 = 256)"},
     {"Set_Group_Mode", "โหมดกลุ่ม"},
     {"Group_Anchor", "จุดยึด"},
     {"Group_Order", "ลำดับ"},

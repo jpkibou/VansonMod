@@ -195,7 +195,7 @@ std::map<std::string, std::string> Lang_FR::getStrings() {
     {"Set_Check_Update", "Vérifier Mise à jour"},
     {"Set_Res_Limit", "Limite de Résultats"},
     {"Set_Group_Range", "Plage de Groupe ±"},
-    {"Set_Group_Range_Placeholder", "Plage (ex: 50)"},
+    {"Set_Group_Range_Placeholder", "Plage (0x100 = 256)"},
     {"Set_Group_Mode", "Mode de Groupe"},
     {"Group_Anchor", "Ancre"},
     {"Group_Order", "Ordre"},

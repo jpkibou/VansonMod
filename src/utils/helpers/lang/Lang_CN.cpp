@@ -195,7 +195,7 @@ std::map<std::string, std::string> Lang_CN::getStrings() {
     {"Set_Check_Update", "检查更新"},
     {"Set_Res_Limit", "结果显示限制"},
     {"Set_Group_Range", "联合范围±"},
-    {"Set_Group_Range_Placeholder", "范围 (例如 50)"},
+    {"Set_Group_Range_Placeholder", "范围 (0x100 = 256)"},
     {"Set_Group_Mode", "联合模式"},
     {"Group_Anchor", "锚点"},
     {"Group_Order", "顺序"},

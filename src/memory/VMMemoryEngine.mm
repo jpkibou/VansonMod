@@ -241,7 +241,7 @@ static void autoSearchProgressBridge(VMCore::MemoryCore::SearchProgress sp,
       self.groupSearchRange = [grpStr longLongValue];
     }
   } else {
-    self.groupSearchRange = 200; 
+    self.groupSearchRange = 0x100; 
   }
   
   NSString *limitStr = [def objectForKey:@"resultLimit"];

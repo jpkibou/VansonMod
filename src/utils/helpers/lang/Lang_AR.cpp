@@ -195,7 +195,7 @@ std::map<std::string, std::string> Lang_AR::getStrings() {
     {"Set_Check_Update", "التحقق من التحديث"},
     {"Set_Res_Limit", "حد النتائج"},
     {"Set_Group_Range", "نطاق المجموعة ±"},
-    {"Set_Group_Range_Placeholder", "النطاق (مثال: 50)"},
+    {"Set_Group_Range_Placeholder", "النطاق (0x100 = 256)"},
     {"Set_Group_Mode", "وضع المجموعة"},
     {"Group_Anchor", "مرساة"},
     {"Group_Order", "ترتيب"},

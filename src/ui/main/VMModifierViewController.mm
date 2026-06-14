@@ -109,23 +109,7 @@ extern "C" int proc_pidpath(int pid, void *buffer, uint32_t buffersize);
              target:self
              action:@selector(showJumpMenu)];
   self.navigationItem.rightBarButtonItems = @[ jumpBtn ];
-  if (!self.isPointerSearchMode) {
-    UIImage *timelineImage =
-        [VMIconHelper compatibleSystemImageNamed:@"clock.arrow.circlepath"];
-    UIBarButtonItem *timelineBtn = nil;
-    if (timelineImage) {
-      timelineBtn = [[UIBarButtonItem alloc] initWithImage:timelineImage
-                                                     style:UIBarButtonItemStylePlain
-                                                    target:self
-                                                    action:@selector(showTimelineSheet)];
-    } else {
-      timelineBtn = [[UIBarButtonItem alloc] initWithTitle:TR(@"Timeline_Nav_Button")
-                                                     style:UIBarButtonItemStylePlain
-                                                    target:self
-                                                    action:@selector(showTimelineSheet)];
-    }
-    self.navigationItem.leftBarButtonItem = timelineBtn;
-  }
+  [self restoreTimelineNavigationButton];
 
   self.selectedItems = [NSMutableArray array];
   [self setupUI];
@@ -153,6 +137,29 @@ extern "C" int proc_pidpath(int pid, void *buffer, uint32_t buffersize);
 
 - (void)dealloc {
   [[NSNotificationCenter defaultCenter] removeObserver:self];
+}
+
+- (void)restoreTimelineNavigationButton {
+  if (self.isPointerSearchMode) {
+    self.navigationItem.leftBarButtonItem = nil;
+    return;
+  }
+
+  UIImage *timelineImage =
+      [VMIconHelper compatibleSystemImageNamed:@"clock.arrow.circlepath"];
+  UIBarButtonItem *timelineBtn = nil;
+  if (timelineImage) {
+    timelineBtn = [[UIBarButtonItem alloc] initWithImage:timelineImage
+                                                   style:UIBarButtonItemStylePlain
+                                                  target:self
+                                                  action:@selector(showTimelineSheet)];
+  } else {
+    timelineBtn = [[UIBarButtonItem alloc] initWithTitle:TR(@"Timeline_Nav_Button")
+                                                   style:UIBarButtonItemStylePlain
+                                                  target:self
+                                                  action:@selector(showTimelineSheet)];
+  }
+  self.navigationItem.leftBarButtonItem = timelineBtn;
 }
 
 - (void)onDidViewMemory:(NSNotification *)note {
@@ -2275,6 +2282,7 @@ extern "C" int proc_pidpath(int pid, void *buffer, uint32_t buffersize);
              target:self
              action:@selector(showJumpMenu)];
   self.navigationItem.rightBarButtonItem = jumpBtn;
+  [self restoreTimelineNavigationButton];
 
   self.batchBarBottomConstraint.constant = 100;
 

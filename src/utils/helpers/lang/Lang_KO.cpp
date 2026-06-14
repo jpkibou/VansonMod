@@ -195,7 +195,7 @@ std::map<std::string, std::string> Lang_KO::getStrings() {
     {"Set_Check_Update", "업데이트 확인"},
     {"Set_Res_Limit", "결과 제한"},
     {"Set_Group_Range", "그룹 범위 ±"},
-    {"Set_Group_Range_Placeholder", "범위 (예: 50)"},
+    {"Set_Group_Range_Placeholder", "범위 (0x100 = 256)"},
     {"Set_Group_Mode", "그룹 모드"},
     {"Group_Anchor", "앵커"},
     {"Group_Order", "순서"},

@@ -195,7 +195,7 @@ std::map<std::string, std::string> Lang_RU::getStrings() {
     {"Set_Check_Update", "Проверить обновления"},
     {"Set_Res_Limit", "Лимит результатов"},
     {"Set_Group_Range", "Диапазон группы ±"},
-    {"Set_Group_Range_Placeholder", "Диапазон (напр. 50)"},
+    {"Set_Group_Range_Placeholder", "Диапазон (0x100 = 256)"},
     {"Set_Group_Mode", "Режим группы"},
     {"Group_Anchor", "Якорь"},
     {"Group_Order", "Порядок"},
