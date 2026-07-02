@@ -1,0 +1,23 @@
+name: Test Workflow
+
+on:
+
+  workflow_dispatch:
+
+jobs:
+
+  test:
+
+    runs-on: macos-latest
+
+    steps:
+
+      - uses: actions/checkout@v4
+
+      - name: Show Xcode Version
+
+        run: xcodebuild -version
+
+      - name: List Repository Files
+
+        run: ls -R
